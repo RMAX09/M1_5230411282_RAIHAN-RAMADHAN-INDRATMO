@@ -31,9 +31,9 @@ def trapesium(a, b, c, d, t):
     return luas, keliling
 
 
-def jajarangenjang(a, t, sAtas, sSamping):
+def jajarangenjang(a, t, sSamping):
     luas = a * t
-    keliling = 2 * (sAtas + sSamping)
+    keliling = 2 * (a + sSamping)
     return luas, keliling
 
 
@@ -85,11 +85,10 @@ while True:
         print(f"Keliling Trapesium : {keliling:.2f}")
 
     elif inputmenu == "5":
-        a = float(input("Masukkan sisi a : "))
+        a = float(input("Masukkan alas : "))
         t = float(input("Masukkan tinggi jajarangenjang : "))
-        sAtas = float(input("Masukkan sisi atas : "))
-        sBawah = float(input("Masukkan sisi bawah : "))
-        luas, keliling = jajarangenjang(a, t, sAtas, sBawah)
+        sSamping = float(input("Masukkan sisi samping : "))
+        luas, keliling = jajarangenjang(a, t, sSamping)
         print(f"Luas Jajarangenjang : {luas:.2f}")
         print(f"Keliling Jajarangenjang : {keliling:.2f}")
 
